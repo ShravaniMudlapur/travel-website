@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore The World | Travel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Explore Button -->
+<button id="explore-btn" class="btn">Explore Now</button>
+<button id="menu-toggle" class="menu-toggle">☰</button>
+
+<!-- Custom Modal -->
+<div id="custom-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+    </div>
+</div>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-400">Wanderlust Wanderings</h1>
+            <ul class="flex space-x-6">
+                  <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+              <!-- Navigation Links -->
+              <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                <li><a href="#destinations" class="hover:text-blue-400">Destinations</a></li>
+                <li><a href="#packages" class="hover:text-blue-400">Packages</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-2 text-center bg-gray-800 p-4">
+            <li><a href="#home" class="hover:text-blue-400 block">Home</a></li>
+            <li><a href="#destinations" class="hover:text-blue-400 block">Destinations</a></li>
+            <li><a href="#packages" class="hover:text-blue-400 block">Packages</a></li>
+            <li><a href="#contact" class="hover:text-blue-400 block">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center text-center"
+        style="background-image: url('assets/pexels-nurseryart-346885.jpg')" 
+        data-aos="fade-up">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold">Discover the Beauty of the World</h1>
+            <p class="mt-4 text-lg md:text-xl">Explore breathtaking destinations with us!</p>
+            <button onclick="showAlert()" 
+                class="mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">
+                Get Started
+            </button>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="py-16 bg-gray-800" data-aos="fade-right">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-blue-400">Popular Destinations</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <!-- Destination 1 -->
+            <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg">
+                <img src="assets/eiffel-tower-s-view-from-park.jpg" alt="Paris" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400">Paris, France</h3>
+                    <p class="mt-2">Experience the romance of the city of lights.</p>
+                </div>
+            </div>
+
+            <!-- Destination 2 -->
+            <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg">
+                <img src="assets/pura-ulun-danu-bratan-bali-hindu-temple-surrounded-by-flowers-bratan-lake.jpg" alt="Bali" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400">Bali, Indonesia</h3>
+                    <p class="mt-2">Relax in the tropical paradise of Bali.</p>
+                </div>
+            </div>
+
+            <!-- Destination 3 -->
+            <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg">
+                <img src="assets/looking-across-valley-towering-mountains.jpg" alt="Switzerland" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400">Swiss Alps</h3>
+                    <p class="mt-2">Adventure in the breathtaking Swiss Alps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Travel Packages Section -->
+<section id="packages" 
+class="py-16 text-white bg-cover bg-center" 
+style="background-image: url('assets/pexels-amorie-sam-468180864-30736269.jpg');" 
+data-aos="fade-up">
+
+<div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-blue-400">Our Travel Packages</h2>
+    <p class="mt-4 text-lg">Choose from our best travel deals and explore the world!</p>
+</div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        
+        <!-- Package 1 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-400">Paris Getaway</h3>
+                <p class="mt-2">Explore the City of Love with a 5-day luxury tour.</p>
+                <p class="mt-2 font-semibold text-yellow-300">Starting at $999</p>
+                <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-400">Bali Beach Escape</h3>
+                <p class="mt-2">Relax on Bali's beautiful beaches with a 7-day stay.</p>
+                <p class="mt-2 font-semibold text-yellow-300">Starting at $799</p>
+                <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-400">Swiss Alps Adventure</h3>
+                <p class="mt-2">Discover breathtaking landscapes and snowy peaks in a 6-day tour.</p>
+                <p class="mt-2 font-semibold text-yellow-300">Starting at $1,499</p>
+                <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">Book Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Contact Us Section -->
+<section id="contact" 
+class="py-16 bg-cover bg-center relative text-white" 
+style="background-image: url('assets/pexels-alex-andrews-271121-821754.jpg');" 
+data-aos="fade-in">
+
+<!-- Dark Overlay for Better Readability -->
+<div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+<div class="relative text-center mb-12">
+    <h2 class="text-3xl font-bold text-blue-400">Contact Us</h2>
+</div>
+
+<div class="relative max-w-lg mx-auto px-4">
+    <form class="bg-gray-700 bg-opacity-90 p-6 rounded-lg">
+        <input type="text" placeholder="Your Name" class="w-full p-2 mt-2 rounded bg-gray-800 text-white">
+        <input type="email" placeholder="Your Email" class="w-full p-2 mt-4 rounded bg-gray-800 text-white">
+        <textarea placeholder="Your Message" class="w-full p-2 mt-4 rounded bg-gray-800 text-white"></textarea>
+        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition">
+            Send Message
+        </button>
+    </form>
+</div>
+</section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function showAlert() {
+            alert("Start your journey with Wanderlust Wanderings!");
+        }
+    </script>
+</body>
+</html>
